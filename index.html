@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            padding: 50px;
+            position: relative; 
+        }
+
+        #small-image {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        #medium-image {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #medium-image img {
+            width: 600px;
+            height: 600px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        #welcome-text {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        #enter-store-btn,
+        #subscribe-btn,
+        #membership-btn,
+        #blog-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        #enter-store-btn:hover,
+        #subscribe-btn:hover,
+        #membership-btn:hover,
+        #blog-btn:hover {
+            background-color: #45a049;
+        }
+        #enter-enquete-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #enter-enquete-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <img src="botafogo.png" alt="Small Image" id="small-image"> 
+
+    <div id="welcome-text">
+        <h1>Bem-vindo à Central Botafogo</h1>
+        <p>Aqui voce vera de tudo sobre o maior clube do mundo</p>
+    </div>
+    
+    <button id="enter-store-btn" onclick="redirectToStore()">Entrar na Loja</button>
+    
+    <a href="socios.html" id="membership-btn" target="_blank">Programa de Sócios</a>
+    <a href="blog-botafogo.html" id="blog-btn" target="_blank">Blog do Glorioso</a>
+    <a href="enquete.php" id="enter-enquete-btn">Enquete Titulo Brasileirao</a>
+
+    <div id="medium-image">
+        <img src="tiquinho.jpg" alt="Medium Image"> 
+    </div>
+
+    <script>
+        function redirectToStore() {
+            window.location.href = 'sua-loja.html'; 
+        }
+    </script>
+</body>
+</html>

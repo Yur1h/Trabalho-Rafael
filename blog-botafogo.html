@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Blog do Botafogo</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #blog-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #000;
+            color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            padding: 20px;
+            text-align: left;
+        }
+
+        h1 {
+            color: #4CAF50;
+            text-align: center; 
+        }
+
+        h2 {
+            color: #4CAF50;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        #comments {
+            margin-top: 30px;
+        }
+
+        #comment-form {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #fff;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div id="blog-content">
+        <h1>Blog do Botafogo</h1>
+        
+        <h2>História do Botafogo</h2>
+        <p>
+            O Botafogo de Futebol e Regatas, ou simplesmente Botafogo, é uma agremiação poliesportiva brasileira, com sede no bairro homônimo ao clube, na cidade do Rio de Janeiro. Nascido da fusão do Club de Regatas Botafogo (fundado para o remo em 1894) com o Botafogo Football Club (formado para o futebol em 1904), é um dos principais clubes do Brasil. Suas maiores glórias esportivas vêm principalmente do futebol, especialmente entre as décadas de 1950 e de 1960, considerada sua era de ouro.
+
+Entre os clubes brasileiros em atividade, o Botafogo é o clube poliesportivo mais antigo e o 7º a praticar ininterruptamente futebol. Em 2006, com a conquista do Campeonato Carioca de Futebol, tornou-se o único clube brasileiro campeão em três séculos. O Club de Regatas Botafogo foi o primeiro clube carioca campeão brasileiro de Remo.
+
+Conhecido pela estrela de cinco pontas em seu distintivo, que lhe dá a alcunha de clube da Estrela Solitária, o Botafogo tem como suas cores oficiais o preto e o branco. Desde 2007, manda seus jogos de futebol no Estádio Nilton Santos, antes chamado de Engenhão. Um dos clubes mais populares do Brasil, tem como seus principais rivais o Flamengo, o Fluminense e o Vasco da Gama.
+        </p>
+
+        <h2>Títulos Conquistados</h2>
+        <p>
+            Ao longo dos anos, o Botafogo acumulou diversos títulos, incluindo Campeonatos Cariocas,
+            Copas do Brasil e outros troféus importantes. Destacam-se as vitórias em 1995 e 1997 na 
+            Taça Conmebol, e o título do Campeonato Brasileiro em 1995.
+            
+        </p>
+    </div>
+
+    <div id="comments">
+        <h2>Comentários</h2>
+        <ul id="comment-list"></ul>
+    </div>
+
+    
+    <div id="comment-form">
+        <h2>Deixe um Comentário</h2>
+        <textarea id="new-comment" placeholder="Digite seu comentário"></textarea>
+        <button onclick="addComment()">Enviar Comentário</button>
+    </div>
+</div>
+
+<script>
+    function addComment() {
+        const newCommentText = document.getElementById('new-comment').value;
+
+        if (newCommentText.trim() !== '') {
+            const commentList = document.getElementById('comment-list');
+            const li = document.createElement('li');
+            li.textContent = newCommentText;
+            commentList.appendChild(li);
+
+            
+            document.getElementById('new-comment').value = '';
+        }
+    }
+</script>
+</body>
+</html>
